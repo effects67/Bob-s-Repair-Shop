@@ -24,9 +24,9 @@
                        <form>
                        
                            <div class="form-check">
-                               <input class="form-check-input" type="checkbox" value="30.99" id="defaultCheck1">
+                               <input class="form-check-input" type="checkbox" value="39.99" id="defaultCheck1">
                                <label class="form-check-label" for="defaultCheck1">
-                               Password reset ($30.99)
+                               Password reset ($39.99)
                                </label>
                            </div>
                
@@ -97,7 +97,7 @@
 
     <script>
 
-        cost=0;
+        cost=0.0;
 
         password=0;
         spyware=0;
@@ -109,36 +109,40 @@
         
 
         function calculateFunction() {
+
+            
             if(document.getElementById("defaultCheck1").checked){
                 cost+=39.99;
                 password+=1;
-            }
+            };
             if(document.getElementById("defaultCheck2").checked){
                 cost+=99.99;
                 spyware+=1;
-            }
+            };
             if(document.getElementById("defaultCheck3").checked){
                 cost+=129.99;
                 ram+=1;
-            }
+            };
             if(document.getElementById("defaultCheck4").checked){
                 cost+=49.99;
                 software+=1;
-            }
+            };
             if(document.getElementById("defaultCheck5").checked){
                 cost+=89.99;
                 tuneup+=1;
-            }
+            };
             if(document.getElementById("defaultCheck6").checked){
                 cost+=45.00;
                 keyboard+=1;
-            }
+            };
             if(document.getElementById("defaultCheck7").checked){
                 cost+=149.99;
                 cleanup+=1;
-            }
+            };
             
-            alert("Total cost is $" + cost + ". \n" + 
+            
+
+            alert("Total cost: $" + cost.toFixed(2) + ". \n"  +
             password + "x Password Reset" + " \n" + spyware + "x Spyware Removed" + " \n" +
             ram + "x RAM Upgrade" + " \n" + software + "x Software Installation" + " \n" +
             tuneup + "x Tune-up" + " \n" + keyboard + "x Keyboard Cleaning" + " \n" + cleanup + "x Disk Clean-up");
